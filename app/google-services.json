@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "177384586604",
+    "firebase_url": "https://ml-kotlin.firebaseio.com",
+    "project_id": "ml-kotlin",
+    "storage_bucket": "ml-kotlin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177384586604:android:a7b9ca6b247b520cca8749",
+        "android_client_info": {
+          "package_name": "project.android.ml_kotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "177384586604-at2gqqp52likfjbva9e0dendf3ccorg4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjhGEv9kp9TxdbdUjodnaUw3KurWzhYzY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "177384586604-at2gqqp52likfjbva9e0dendf3ccorg4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
