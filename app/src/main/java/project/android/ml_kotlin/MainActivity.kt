@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         text_Rec = findViewById(R.id.txt_rec)
         face = findViewById(R.id.face_det)
         text_Rec.setOnClickListener(){
-            startActivity(Intent(baseContext,TextRecognisation::class.java))
+            startActivity(Intent(baseContext,TextRec::class.java))
         }
         face.setOnClickListener(){
             startActivity(Intent(baseContext,FaceDetection::class.java))

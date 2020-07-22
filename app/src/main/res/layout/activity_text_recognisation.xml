@@ -44,19 +44,28 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/click" />
 
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="Select Image"
+            android:onClick="selectImg"
+            app:layout_constraintEnd_toEndOf="@+id/detect"
+            app:layout_constraintStart_toStartOf="@+id/click"
+            app:layout_constraintTop_toBottomOf="@+id/click">
+        </Button>
+
         <TextView
             android:id="@+id/converttxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="24dp"
             android:text=""
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="@+id/detect"
-            app:layout_constraintHorizontal_bias="0.458"
-            app:layout_constraintStart_toStartOf="@+id/click"
-            app:layout_constraintTop_toBottomOf="@+id/click" />
+            android:textSize="44sp"
+            app:layout_constraintEnd_toEndOf="@+id/button2"
+            app:layout_constraintStart_toStartOf="@+id/button2"
+            app:layout_constraintTop_toBottomOf="@+id/button2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

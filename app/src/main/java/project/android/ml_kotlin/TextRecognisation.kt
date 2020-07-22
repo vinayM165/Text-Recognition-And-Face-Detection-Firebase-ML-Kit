@@ -21,6 +21,7 @@ import kotlinx.android.synthetic.main.activity_text_recognisation.view.*
 
 class TextRecognisation : AppCompatActivity() {
     val REQ_IMAGE = 1
+    val REQUEST_SELECT_IMAGE_IN_ALBUM = 2
     lateinit var imageV: ImageView
     lateinit var con_text: TextView
     lateinit var bitmap: Bitmap
@@ -38,9 +39,23 @@ class TextRecognisation : AppCompatActivity() {
             }
         }
     }
+    fun selectImg(view: View){
+        fun selectImageInAlbum() {
+            val intent = Intent(Intent.ACTION_GET_CONTENT)
+            intent.type = "image/*"
+            intent.action = Intent.ACTION_GET_CONTENT
+            if (intent.resolveActivity(packageManager) != null) {
+                startActivityForResult(intent, REQUEST_SELECT_IMAGE_IN_ALBUM)
+            }
+        }
+    }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if(requestCode == REQ_IMAGE && resultCode == Activity.RESULT_OK){
+            bitmap = data!!.extras!!.get("data") as Bitmap
+            imageV.setImageBitmap(bitmap)
+        }
+        if(requestCode == REQUEST_SELECT_IMAGE_IN_ALBUM && resultCode ==  Activity.RESULT_OK){
             bitmap = data!!.extras!!.get("data") as Bitmap
             imageV.setImageBitmap(bitmap)
         }
@@ -76,6 +91,8 @@ class TextRecognisation : AppCompatActivity() {
             con_text.setText(blockText + "\n")
         }
     }
+
+
 
 
 }
